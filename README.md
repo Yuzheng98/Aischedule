@@ -7,16 +7,16 @@
 
 # 使用步骤
 1. 下载AISchdule DevTools压缩包，解压到本地。
-2. 下载Chrome，打开链接 chrome://extensions/ ，打开开发者模式，导入AISchedule DevTools文件夹。 ![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcn0cLvggaZBxBQqvrcxOn8Eh/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
-3. 在Chrome打开一个新的Tab，打开、登陆自己的教务系统，进入课程页面（比如下图展示课程表）。  ![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcn8XBOmCkUtukm2qwSvaOaWd/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
-4. 在网页内右键，选「检查」，打开Chrome开发者工具，会有新增的AISchedule标签，进入后请跟随新手引导，创建「适配项目」。 ![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcnmUOxY4t5fX14tQCVxzRKnc/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
+2. 下载Chrome，打开链接 chrome://extensions/ ，打开开发者模式，导入AISchedule DevTools文件夹。
+3. 在Chrome打开一个新的Tab，打开、登陆自己的教务系统，进入课程页面（比如下图展示课程表）。 
+4. 在网页内右键，选「检查」，打开Chrome开发者工具，会有新增的AISchedule标签，进入后请跟随新手引导，创建「适配项目」。 
 ！注意：学校url请填写官方url，不要填写ip或者代理！ 
-![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcnKRrXYEmi0xAs7NwFtTvwkb/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
-5. 当你点击provider/parser函数的代码区时，会跳转到sources中，在此你可以编辑scheduleHtmlProvider函数、scheduleHtmlParser函数，并打断点debug。  ![image](https://user-images.githubusercontent.com/60589466/111071354-b6561d80-8510-11eb-921a-1699b36d84ea.png)
 
-6. 你可以参考注释与示例函数，编写两个适配函数。按ctrl+s/cmd+s保存，然后在网页中右键，选「AISchedule DevTools 运行」，Console中会打印出运行结果，两个函数的输出会分别在新窗口中显示，以便你边参考边修改函数。scheduleHtmlParser函数的输出须符合以下数据结构。  ![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcnznYv4ntI49qc01JniWw5Rf/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
+5. 当你点击provider/parser函数的代码区时，会跳转到sources中，在此你可以编辑scheduleHtmlProvider函数、scheduleHtmlParser函数，并打断点debug。 
+
+6. 你可以参考注释与示例函数，编写两个适配函数。按ctrl+s/cmd+s保存，然后在网页中右键，选「AISchedule DevTools 运行」，Console中会打印出运行结果，两个函数的输出会分别在新窗口中显示，以便你边参考边修改函数。scheduleHtmlParser函数的输出须符合以下数据结构。
 （代码中无需引用任何模块，不要带有“require”这样的字符）
-（scheduleHtmlParser函数的输出须符合以下数据结构）  ![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcnwONMBtZcpqrf3BUAWrPHSc/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
+（scheduleHtmlParser函数的输出须符合以下数据结构）
 不支持在 Docs 外粘贴 block   
 ```JAVASCRIPT
 {
@@ -166,9 +166,9 @@
     ]
   }
 ```
-7. 经过调试，如果在console中看到「All run successfully」，然后你可以上传到手机端，进行E2E自测（端到端自测）。  ![image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/boxcnSwSas8mp9Jb2HXs48Clqfd/?mount_node_token=doccnhZPl8KnswEthRXUz8ivnhb&mount_point=doc_image)
-8. 在手机端打开课程表的教务导入功能，搜索学校，选择自己提交的适配，你可亲自体验，验证可用性。如果你觉得没问题，请点击反馈按钮「完美」，至此，你的适配已完成，状态为审核中。  ![image](blob:https://ldtu0m3md0.feishu.cn/3db21cb3-616d-4695-93d4-b4a67ba8af77)      ![image](blob:https://ldtu0m3md0.feishu.cn/be9b2a38-ef14-49a0-9612-93031e81f292)    ![image](blob:https://ldtu0m3md0.feishu.cn/44d921c2-aefc-4cfd-9176-5c4667f596aa)
-如果未导入成功，请查看右下角vControl中的log->info,核对返回值：   ![image](blob:https://ldtu0m3md0.feishu.cn/c8a60cd5-44c0-44a5-9734-c7dbd4b9f0d5)
+7. 经过调试，如果在console中看到「All run successfully」，然后你可以上传到手机端，进行E2E自测（端到端自测）。 
+8. 在手机端打开课程表的教务导入功能，搜索学校，选择自己提交的适配，你可亲自体验，验证可用性。如果你觉得没问题，请点击反馈按钮「完美」，至此，你的适配已完成，状态为审核中。  
+如果未导入成功，请查看右下角vControl中的log->info,核对返回值：  
 9. 工具中会保存你的历史适配记录和适配学校的状态，如果你的适配项目发布了，会为很多同学提供便利哦~
 # 术语解释
 - scheduleHtmlProvider函数：输入课程页面的 document 对象，从页面中提取课程信息的HTML片段,输出HTML字符串。
